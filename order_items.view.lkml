@@ -21,7 +21,7 @@ view: order_items {
   measure : sum_total_cost {
     label: "Prêmio Total"
     type: sum_distinct
-    sql: ${sale_price};;
+    sql: CASE WHEN ${inventory_item_id} > 0 THEN ${products.retail_price} ELSE 0 END;;
     sql_distinct_key: ${id};;
 #     filters: {
 #       field: order_items.inventory_item_id_voolean
