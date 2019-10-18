@@ -68,6 +68,12 @@ view: order_items {
 #     }
   }
 
+  measure: delta {
+    type: number
+    sql: (${orders.count}/${order_items.count})-1 ;;
+    value_format_name: percent_1
+  }
+
   measure: count {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]

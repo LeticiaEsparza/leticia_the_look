@@ -46,6 +46,22 @@ view: inventory_items {
     sql: ${TABLE}.sold_at ;;
   }
 
+  dimension:  longitude{
+    type: number
+    sql: ROUND(-80.27000000000001,2) ;;
+  }
+
+  dimension: latitude {
+    type: number
+    sql: ROUND(25.810000000000002,2) ;;
+  }
+
+  dimension: lat_long {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id, products.item_name, products.id, order_items.count]

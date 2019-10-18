@@ -17,6 +17,11 @@ view: products {
     sql: ${TABLE}.category ;;
   }
 
+  dimension: whitespace {
+    type: string
+    sql: "Testing   " ;;
+  }
+
   dimension: department {
     type: string
     sql: ${TABLE}.department ;;
