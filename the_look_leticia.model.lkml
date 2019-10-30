@@ -2,6 +2,7 @@ connection: "thelook"
 
 # include all the views
 include: "*.view"
+include: "dashboard_next_test.dashboard.lookml"
 
 datagroup: the_look_leticia_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
