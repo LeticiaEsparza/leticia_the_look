@@ -5,12 +5,13 @@ include: "*.view"
 include: "dashboard_next_test.dashboard.lookml"
 
 datagroup: the_look_leticia_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
 persist_with: the_look_leticia_default_datagroup
 
+explore: symphonyrm_test_sql_step {}
 explore: events {
 #   access_filter: {
 #     field: users.email

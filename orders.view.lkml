@@ -16,6 +16,7 @@ view: orders {
       week,
       month,
       quarter,
+      fiscal_quarter,
       year
     ]
     sql: ${TABLE}.created_at ;;
