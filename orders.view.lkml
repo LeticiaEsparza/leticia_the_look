@@ -21,9 +21,30 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
 
+  # filter: status_filter {
+  #   type: string
+  #   suggestable: yes
+  # }
+
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    action: {
+      label: "Label to Appear in Action Menu"
+      url: "https://example.com/posts"
+      icon_url: "https://looker.com/favicon.ico"
+      form_url: "https://example.com/ping/{{ value }}/form.json"
+      param: {
+        name: "name string"
+        value: "value string"
+      }
+      form_param: {
+        name: "name string"
+        type:  string
+        label: "possibly-localized-string"
+        default: "string"
+      }
+    }
   }
 
   dimension: user_id {

@@ -34,5 +34,5 @@ explore: order_items {
 #   join: users {
 #     relationship: many_to_one
 #     sql_on: ${users.id} = ${orders.user_id} ;;
-#   }
+
 }
